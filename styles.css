@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e1e20;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.play-ground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 85%;
+    height: 99%;
+    border: 2px solid orange;
+    background: linear-gradient(#a2c1da, #75a3c9, #576d7e)
+}
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: centere;
+    align-items: start;
+    padding: 50px 30px 0px 30px;
+    height: 100vh;
+    gap: 20px;
+}
+.time-container {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.scores-container {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.menu-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.menu-bar {
+    font-size: 20px;
+    color: orange;
+    font-weight: bold;
+    background-color: white;
+    padding: 20px 30px 20px 30px;
+}
+.image-person {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    cursor: pointer;
+    z-index: 5;
+}
+.time {
+    color: rgb(212, 212, 212);
+    box-shadow: 2px 2px 2px 2px orange;
+    animation-name: time;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes time {
+    50% {
+        box-shadow: 5px 5px 5px 5px orange;
+    }
+    100% {
+        box-shadow: 2px 2px 2px 2px orange;
+    }
+}
+
+.match-stats-container {
+    z-index: 10;
+    width: 30%;
+    height: 30%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+}
+.match-stats-container2 {
+    z-index: 10;
+    width: 30%;
+    height: 30%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.text1 {
+    color: white;
+    font-size: 18px;
+}
