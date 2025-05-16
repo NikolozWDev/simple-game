@@ -69,21 +69,51 @@ body {
 }
 .time {
     color: rgb(212, 212, 212);
-    box-shadow: 2px 2px 2px 2px orange;
     animation-name: time;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 @keyframes time {
     50% {
-        box-shadow: 5px 5px 5px 5px orange;
+        color: orange;
     }
     100% {
-        box-shadow: 2px 2px 2px 2px orange;
+        color: rgb(212, 212, 212);
+    }
+}
+.scores {
+    color: white;
+    animation-name: score;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes score {
+    50% {
+        color: rgb(0, 255, 34);
+    }
+    100% {
+        color: rgb(212, 212, 212);
+    }
+}
+.coins {
+    color: white;
+    animation-name: coin;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes coin {
+    50% {
+        color: rgb(180, 29, 29);
+    }
+    100% {
+        color: rgb(212, 212, 212);
     }
 }
 
 .match-stats-container {
+    position: relative;
     z-index: 10;
     width: 30%;
     height: 30%;
@@ -100,20 +130,52 @@ body {
     transition: all 0.3s;
 }
 .match-stats-container2 {
-    z-index: 10;
-    width: 30%;
-    height: 30%;
-    background-color: black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     pointer-events: all;
     opacity: 1;
     transform: translateY(0px);
 }
+.exit {
+    z-index: 20;
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 .text1 {
     color: white;
     font-size: 18px;
+}
+.text2 {
+    color: white;
+    font-size: 18px;
+}
+.text3 {
+    color: white;
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 750px) {
+    .time-container {
+        font-size: 18px;
+    }
+    .scores-container {
+        font-size: 18px;
+    }
+    .menu-bar-container {
+        width: 100px;
+        height: 100px;
+    }
+    .match-stats-container {
+        width: 90%;
+    }
 }
